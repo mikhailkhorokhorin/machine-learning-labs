@@ -1,4 +1,4 @@
-# Lab 4. Bayesian network
+# Lab 4. Bayesian Network
 
 ## Task
 
@@ -12,21 +12,23 @@ The notebook [lab4.ipynb](lab4.ipynb) builds a network with `pgmpy` on the [Stud
 - three questions answered by inference, comparing $P(A)$ with $P(A \mid B)$;
 - an experiment with sequentially added evidence, the "explaining away" effect, removal of an edge and a discussion of causality.
 
-## Data
-
-[data/student-por.csv](data/student-por.csv) — the original UCI file (`;`-separated).
-
-## Results
-
-| Question | Prior | Posterior |
-| --- | --- | --- |
-| $P(\text{fail} \mid \text{past failures})$ | 0.157 | 0.490 |
-| $P(\text{heavy weekend drinking} \mid \text{male}, \text{study time} < 2\ \text{h})$ | 0.202 | 0.402 |
-| $P(\text{no higher-education plans} \mid \text{fail})$ | 0.109 | 0.327 |
-| $P(\text{past failures} \mid \text{fail})$ | 0.157 | 0.489 |
-
-## Run
+## Build and run
 
 ```bash
 make run LAB=lab4
 ```
+
+## Example
+
+Answers of the network to the questions, before and after the evidence:
+
+| Question | Prior | Posterior |
+| --- | --- | --- |
+| $P(\text{fail} \mid \text{past failures})$ | 0.157 | 0.490 |
+| $P(\text{heavy weekend drinking} \mid \text{male}, \text{study time} < 2\ \text{h a week})$ | 0.202 | 0.402 |
+| $P(\text{no higher-education plans} \mid \text{fail})$ | 0.109 | 0.327 |
+| $P(\text{past failures} \mid \text{fail})$ | 0.157 | 0.489 |
+
+## Notes
+
+Data: [data/student-por.csv](data/student-por.csv) — the original UCI file (`;`-separated).

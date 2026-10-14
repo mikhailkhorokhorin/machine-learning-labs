@@ -1,4 +1,4 @@
-# Lab 3. Hyperparameter optimization
+# Lab 3. Hyperparameter Optimization
 
 ## Task
 
@@ -12,11 +12,17 @@ The notebook [lab3.ipynb](lab3.ipynb) uses the Titanic task from [lab 2](../lab2
 - validation curves with regions of underfitting, reasonable complexity and overfitting;
 - final test evaluation, a fold-by-fold comparison with the baseline and the stability of the results.
 
-Tuning gives a small but consistent CV gain (+0.016, better on 10–11 of 15 folds) that does not show on the 179-passenger test: the difference there is within noise.
+## Build and run
 
-The data is read from [../lab2/data/titanic.csv](../lab2/data/titanic.csv).
+```bash
+make run LAB=lab3
+```
 
-## Results
+The notebook takes about two minutes to execute.
+
+## Example
+
+Results of the notebook (CV on the training part, F1 on the held-out test part):
 
 | Model | Parameters | CV F1 | CV std | Test F1 |
 | --- | --- | --- | --- | --- |
@@ -24,10 +30,8 @@ The data is read from [../lab2/data/titanic.csv](../lab2/data/titanic.csv).
 | Grid Search | 400 trees, lr 0.01, depth 4 | 0.773 | 0.043 | 0.734 |
 | Random Search | 93 trees, lr 0.047, depth 4 | **0.774** | 0.045 | 0.719 |
 
-## Run
+## Notes
 
-```bash
-make run LAB=lab3
-```
+Tuning gives a small but consistent CV gain (+0.016, better on 10–11 of 15 folds) that does not show on the 179-passenger test: the difference there is within noise.
 
-The notebook takes about two minutes to execute.
+The data is read from [../lab2/data/titanic.csv](../lab2/data/titanic.csv).

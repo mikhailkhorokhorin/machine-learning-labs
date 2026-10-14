@@ -12,11 +12,17 @@ The notebook [lab1.ipynb](lab1.ipynb) covers:
 - feature importance of both tree models compared with the standardized linear coefficients and the correlations;
 - error analysis of the best model by grade and on the largest mistakes.
 
-## Data
+## Build and run
 
-[data/winequality-red.csv](data/winequality-red.csv) and [data/winequality-white.csv](data/winequality-white.csv) are the original UCI files (`;`-separated).
+```bash
+make run LAB=lab1
+```
 
-## Results
+The notebook takes about two minutes to execute.
+
+## Example
+
+Results of the notebook on the held-out test part (20%):
 
 | Model | CV RMSE (train) | Test RMSE | Test MAE |
 | --- | --- | --- | --- |
@@ -25,10 +31,6 @@ The notebook [lab1.ipynb](lab1.ipynb) covers:
 | **Random Forest** | **0.685** | **0.670** | **0.516** |
 | Gradient Boosting | 0.697 | 0.685 | 0.525 |
 
-## Run
+## Notes
 
-```bash
-make run LAB=lab1
-```
-
-The notebook takes about two minutes to execute.
+Data: [data/winequality-red.csv](data/winequality-red.csv) and [data/winequality-white.csv](data/winequality-white.csv) are the original UCI files (`;`-separated).

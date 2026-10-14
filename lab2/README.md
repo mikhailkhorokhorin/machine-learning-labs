@@ -12,11 +12,15 @@ The notebook [lab2.ipynb](lab2.ipynb) covers:
 - feature importance of the tree models and error analysis by passenger group;
 - leakage checks: with `PassengerId` added, without `Fare`, and with CV folds grouped by ticket. The deep trees partly memorize families (CV F1 drops by 0.03–0.05), the chosen SVM does not.
 
-## Data
+## Build and run
 
-[data/titanic.csv](data/titanic.csv) — the original 891-row passenger list.
+```bash
+make run LAB=lab2
+```
 
-## Results
+## Example
+
+Results of the notebook on the held-out test part (20%):
 
 | Model | CV F1 | Test accuracy | Test precision | Test recall | Test F1 |
 | --- | --- | --- | --- | --- | --- |
@@ -27,8 +31,6 @@ The notebook [lab2.ipynb](lab2.ipynb) covers:
 | **SVM** | **0.749** | **0.827** | **0.839** | 0.681 | **0.752** |
 | KNN | 0.718 | 0.804 | 0.804 | 0.652 | 0.720 |
 
-## Run
+## Notes
 
-```bash
-make run LAB=lab2
-```
+Data: [data/titanic.csv](data/titanic.csv) — the original 891-row passenger list.
