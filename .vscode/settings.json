@@ -1,0 +1,22 @@
+{
+  "python.defaultInterpreterPath": "/opt/venv/bin/python",
+  "jupyter.notebookFileRoot": "${fileDirname}",
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "notebook.formatOnSave.enabled": true,
+  "notebook.defaultFormatter": "charliermarsh.ruff",
+  "[markdown]": {
+    "editor.defaultFormatter": "davidanson.vscode-markdownlint"
+  },
+  "markdownlint.config": {
+    "extends": "${workspaceFolder}/.config/.markdownlint.yaml"
+  }
+}

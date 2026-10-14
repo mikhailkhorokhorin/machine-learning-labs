@@ -1,0 +1,8 @@
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+cache-dir = "build/.ruff_cache"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "ANN", "SIM", "C4", "RUF"]

@@ -1,0 +1,19 @@
+{
+  "name": "Machine Learning Labs",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "editorconfig.editorconfig",
+        "davidanson.vscode-markdownlint"
+      ]
+    }
+  }
+}

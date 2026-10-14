@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "lab",
+      "type": "pickString",
+      "description": "Lab",
+      "options": [
+        "lab1",
+        "lab2",
+        "lab3",
+        "lab4"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "make run LAB=${input:lab}",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test",
+      "type": "shell",
+      "command": "make test LAB=${input:lab}",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Format",
+      "type": "shell",
+      "command": "make format",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint",
+      "type": "shell",
+      "command": "make lint",
+      "problemMatcher": []
+    },
+    {
+      "label": "CI",
+      "type": "shell",
+      "command": "make ci",
+      "problemMatcher": []
+    }
+  ]
+}
